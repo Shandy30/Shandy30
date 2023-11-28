@@ -18,7 +18,7 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")
---streamlit.text(fruityvice_response.json()) #just writes data to the screen
+//streamlit.text(fruityvice_response.json()) #just writes data to the screen
 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) # this line creates tabular object to the screen
 streamlit.dataframe(fruityvice_normalized) #populates data inside the table on the screen
